@@ -1,0 +1,590 @@
+/* Initialisation des différentes police d'écritures */
+
+@font-face {
+    font-family: Bebas;
+    src: url(fonts/BebasNeue-Regular.ttf);
+  }
+  
+@font-face {
+  font-family: Lemon;
+  src: url(fonts/LEMONMILK-Medium.otf);
+}
+
+
+@font-face {
+  font-family: Lemon;
+  src: url(“fonts/Roboto_Regular.ttf”);
+  font-weight : normal;
+  font-style : normal;
+}
+
+
+
+@font-face {
+  font-family: Lemon;
+  src: url(“fonts/LEMO.ttf”);
+  font-weight : normal;
+  font-style : normal;
+}
+  
+
+@font-face {
+    font-family: “Roboto”;
+    src: url(“fonts/Roboto_Regular.ttf”);
+    font-weight : normal;
+    font-style : normal;
+}
+
+@font-face {
+    font-family: “Roboto”;
+    src: url(“fonts/Roboto_Black”);
+    font-weight : bold;
+    font-style : normal;
+}    
+
+
+@font-face {
+    font-family: “Roboto”;
+    src: url(“fonts/Roboto_Thin.ttf”);
+    font-weight : lighter;
+    font-style : normal;
+}
+
+
+
+
+
+/*Propriétés général */
+*
+{  
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+html
+{
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+body
+{
+  background-color: rgb(233, 243, 243);
+  overflow-x: hidden;
+}
+
+
+
+
+
+/*Propriétés en tete*/
+header
+{
+  width: 100%;
+  height: 100vh;
+  background: url(images/Banière_hero/baniere_hero_x2_blur.jpg) no-repeat center / cover;
+}
+
+.container 
+{
+  height: 90vh;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /*Ajustement pour compenser le fait que la section hero passe legerement en dessous la section marge haute*/
+  box-sizing: border-box; /*Pour ne pas que la taille du modèle de boite soit influencé par le padding*/
+  padding-bottom: 10%;
+}
+
+.logo_hero
+{
+  width: 75%;
+}
+
+.logo_hero img
+{
+  width: 100%; /*100% de son conteneur, à savoir le paragraphe logo_hero*/
+}
+
+
+
+
+
+/*Propriétés Menu de navigation*/
+#logo_header
+{
+  width: 100px;
+}
+
+nav
+{
+  width: 100%;
+}
+
+nav ul 
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+nav a
+{
+  font-family: Lemon, Arial, Helvetica, sans-serif;
+  
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+nav li 
+{
+  /*ajout pour ne pas que les éléments se collent trop quand la taille de la fenetre change*/
+  /*besoin de le faire avec <li> et non <a> pour eviter les problèmes de formatage de texte et d'aligmement des lettres*/
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+nav a:hover
+{
+  text-shadow: 3px 3px 0px blue;
+}
+
+
+
+
+
+/*Propriétés de la marge qui fait la separation du hero et du reste du site*/
+#marge_haute
+{
+  background-color: rgb(3, 3, 31);
+  color: white;
+  width: 100%;
+  height: 30vh;
+  margin-top: -5%;
+ /*clip-path: polygon(0 20%, 100% 0%, 100% 80%, 0% 100%);*/
+  clip-path: polygon(0 calc(0% + 2.5vw), 100% 0%, 100% calc(100% - 2.5vw), 0% 100%); /*version plus "responsive" */
+  
+}
+
+#marge_haute h1
+{
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 0px red;
+  position: relative;
+  color: white;
+  z-index: 8;
+  text-align: center;
+  padding-top: 13vh; /*fix décalage verticale*/
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+
+/*Propriétés TOP ELEMENTS*/
+#call_to_action
+{
+  text-align: center;
+  margin-top: 5%;
+  font-size: 5rem;
+  text-shadow: 3px 2px 0px red;
+}
+
+#forme
+{
+  height: 25vw;
+  clip-path: polygon(0 10% , 100% 0, 100% 90% , 0 100%);
+  background-color: rgb(3, 3, 31);
+}
+
+#top_elements 
+{
+  margin-top: 15%;
+  position: relative;
+  width: 100%;
+}
+
+#top_elements_marge img
+{
+  width: 100%;
+}
+
+#cartes ul
+{
+  position: absolute;
+  top: -3vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; 
+}
+
+#cartes li * /*le selecteur "tout" a un comportement different pour les hors-zone par rapport à la balise <a>*/
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#cartes ul li img
+{
+  width: 75%;
+  margin: 0;
+  padding: 0;
+  transition: all .2s ease-in-out; /*permet d'avoir une animation hover fluide*/
+}
+
+#cartes ul li img:hover
+{
+  transform: scale(1.1);
+}
+
+
+
+
+
+/*propriétés section principale*/
+#main_element
+{
+  background-color: rgb(233, 243, 243);
+  clip-path: polygon(0 calc(0% + 2.5vw), 100% 0%, 100% calc(100% - 2.5vw), 0% 100%);
+
+  margin-top: 20%;
+  margin-bottom: -15vw;
+  padding-bottom: 18vh;
+}
+
+#conteneur_patch
+{
+  text-align: center;
+}
+
+#main_element img
+{
+  width: 75%;
+}
+
+#conteneur_patch_smartphone
+{
+  display: none;
+}
+
+
+
+
+
+/*propriétés bouton contact*/
+#contact_btn_section
+{
+  margin-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact_btn_section_texte
+{
+  font-size: 1.25rem;
+  width: 50%;
+  min-width: 18rem;
+  max-width: 35rem;
+}
+
+#contact_btn_section h1
+{
+  text-align: center;
+  font-family: Lemon ,Arial, Helvetica, sans-serif;
+  text-shadow: 2px 1px 0px red;
+  font-size: 2rem ; 
+}
+
+#contact_btn_section p
+{
+  margin-top: 0.5rem;
+  text-align: center;
+  word-wrap:break-word;
+}
+
+#contact_btn_section a
+{
+  margin-top: 2rem;
+  background-color: rgba(55, 0, 255, 0.842);
+  color: white;
+  text-decoration: none;
+  font-family: Lemon ,Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  padding: 1rem;
+  border-radius: 15px;
+
+  transition: all .2s ease-in-out;
+
+  /*Pour pouvoir passer devant la Div du Vertical Nav*/
+  position: relative;
+  z-index: 2;
+}
+
+#contact_btn_section a:hover
+{
+  background-color: blueviolet;
+  box-shadow: 0 5px 0 rgb(68, 10, 122);
+  margin-top: 1.8rem;
+  margin-bottom: 0.2rem;
+}
+
+
+
+
+
+/*propriétés pied de page*/
+footer
+{
+  background-color: rgb(2, 2, 36);
+  color: #EEF2F4;
+  font-family: Roboto ,Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 20%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 6rem;
+}
+
+
+/*Ajustement footer*/
+footer h1
+{
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  margin-top: 6rem;
+}
+
+footer em , a 
+{
+  font-weight: 100;
+  font-style: normal;
+  text-decoration: none;
+  color: white;
+}
+
+footer li
+{
+  margin-top: 0.5rem;     
+}
+
+
+/*FICHE CONTACT*/
+.contact a em:hover
+{
+  transition: all .1s ease-in-out;
+}
+
+.contact a em:hover
+{
+ text-shadow: 1px 1px 0px rgb(155, 4, 255); 
+}
+
+
+/*FICHE RESEAUX SOCIAUX*/
+.socials ul
+{
+ 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+
+.socials img
+{
+  scale: 0.6;
+  transition: all .2s ease-in-out;
+}
+
+.socials img:hover
+{
+  /*margin-right: 1rem;*/
+  transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------MEDIA QUERRIES-----------------------------*/
+
+/*regles generales*/
+@media screen and (max-width : 500px) 
+{
+  #call_to_action
+  {
+    font-size: 3rem;
+    text-shadow: 1.5px 1.3px 0px red;
+  }
+
+}
+
+
+
+
+
+/*regles pour telephones en mode portrait*/
+@media screen and (max-width : 910px) and (orientation: portrait)
+{
+  
+  /*Menu navigation*/  
+  nav ul
+  {
+    flex-direction: column;
+    background-color: rgba(2, 2, 36, 0.603);
+    padding-top: 0.25rem;
+    padding-bottom: 1rem;
+    clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 2.5vw), 0% 100%);
+  }
+
+  nav li 
+  {
+    margin-bottom: 0.75rem;
+  }
+
+
+  /*Hero*/
+  .container 
+  {
+   padding-bottom: 15rem; 
+  }
+
+
+  #marge_haute h1
+  {
+    font-size: 2rem;
+  }
+  
+
+  #call_to_action
+  {
+    font-size: 3rem;
+    text-shadow: 2px 2px 0px red;
+  }
+
+  .container 
+  {
+    background-color: rgba(137, 43, 226, 0);
+    padding-bottom: 0; 
+    height: 52.6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  /*Information principale*/
+  #main_element img
+  {
+    width: 90%;
+  }
+
+  #conteneur_patch_smartphone
+  {
+    display:block;
+    text-align: center;
+  }
+
+  #conteneur_patch
+  {
+    display: none;
+  }
+
+
+  /*contact section*/
+  #contact_btn_section h1
+  {
+    text-shadow: 1.5px 1.3px 0px red;
+  }
+
+
+  /*Pied de page*/
+  footer 
+  {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+
+
+
+@media screen and (max-width : 336px) and (orientation: portrait)/*petits smartphones (Iphone 5 , SE)*/
+{
+  .container 
+  {
+    height: 45.4vh;
+  }
+} 
+
+
+
+
+
+@media screen and (max-width : 319px) and (orientation: portrait)/*petits smartphones (Iphone 5 , SE)*/
+{
+  .container 
+  {
+    height: 39.7vh;
+  }
+} 
+
+
+
+
+
+
+
+
+
+
+
+/*nouvelle regles pour telephone en mode paysages */
+/*@media screen and (max-height: 700px )
+{
+}
+*/
+
+
+@media screen and (max-width : 888px) and (orientation: landscape)
+{
+  /*Propriétés Menu de navigation*/
+  nav a
+  {
+    font-size: 1.5rem;
+  }
+  
+}
+
+
+@media screen and (max-width : 655px) and (orientation: landscape)
+{
+  /*Propriétés Menu de navigation*/
+  nav a
+  {
+    font-size: 1.2rem;
+  }
+  
+}

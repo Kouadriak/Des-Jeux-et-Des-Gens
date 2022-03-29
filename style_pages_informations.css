@@ -1,0 +1,378 @@
+/* Initialisation des différentes police d'écritures */
+
+@font-face {
+    font-family: Bebas;
+    src: url(fonts/BebasNeue-Regular.ttf);
+  }
+  
+@font-face {
+  font-family: Lemon;
+  src: url(fonts/LEMONMILK-Medium.otf);
+}
+
+
+@font-face {
+  font-family: Lemon;
+  src: url(“fonts/Roboto_Regular.ttf”);
+  font-weight : normal;
+  font-style : normal;
+}
+
+
+
+@font-face {
+  font-family: Lemon;
+  src: url(“fonts/LEMO.ttf”);
+  font-weight : normal;
+  font-style : normal;
+}
+  
+
+@font-face {
+    font-family: “Roboto”;
+    src: url(“fonts/Roboto_Regular.ttf”);
+    font-weight : normal;
+    font-style : normal;
+}
+
+@font-face {
+    font-family: “Roboto”;
+    src: url(“fonts/Roboto_Black”);
+    font-weight : bold;
+    font-style : normal;
+}    
+
+
+@font-face {
+    font-family: “Roboto”;
+    src: url(“fonts/Roboto_Thin.ttf”);
+    font-weight : lighter;
+    font-style : normal;
+}
+
+
+
+
+
+/*Propriétés général */
+*
+{  
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+html
+{
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+body
+{
+  background-color: rgb(233, 243, 243);
+}
+
+
+
+
+
+/*Propriétés Menu de navigation*/
+#logo_header
+{
+  width: 100px;
+}
+
+nav
+{
+  width: 100%;
+  padding-bottom: 2rem;
+  background-color: rgb(2, 2, 36);
+  clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 2.5vw), 0% 100%);
+}
+
+nav ul 
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+nav a
+{
+  font-family: Lemon, Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+nav li 
+{
+  /*ajout pour ne pas que les éléments se collent trop quand la taille de la fenetre change*/
+  /*besoin de le faire avec <li> et non <a> pour eviter les problèmes de formatage de texte et d'aligmement des lettres*/
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+nav a:hover
+{
+  text-shadow: 3px 3px 0px blue;
+}
+
+
+
+
+
+/*¨Propriétés section principale*/
+#informations_principales
+{
+  width: 90%;
+  margin-top: 10vh;    
+  margin-bottom: 10vh;    
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  justify-content: center;
+}
+
+.infos_texte
+{
+  background-color: rgba(200, 230, 230, 0.623);
+  border-radius: 50px;
+  padding: 25px;
+  width: 40%;
+  font-size: 1.5rem;
+}
+
+.infos_texte h1, .infos_texte h2
+{
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+}
+
+.infos_texte h2
+{
+  font-size: 2rem;
+}
+
+
+.infos_texte a 
+{
+  background-color: rgba(55, 0, 255, 0.842);
+  padding: 1rem;
+  border-radius: 15px;
+  transition: all .2s ease-in-out;
+}
+
+.infos_texte a:hover
+{
+  background-color: blueviolet;
+  box-shadow: -5px 5px 0 rgb(68, 10, 122);
+  margin-left: 5px;
+}
+
+.infos_images
+{
+  margin-right: 3vw;
+  width: 60%;
+  min-height: 75vh;
+  border-radius: 75px;
+  box-shadow: 10px 10px 10px rgba(5, 10, 75, 0.37);
+}
+
+
+/*Gestion Illustration spécifique à chaque page d'information*/
+#images_jeux_de_plateau
+{
+  background: url(images/Pages_informations/illustration_info_Jeux_plateau_mains.jpg) center / cover;
+}
+
+#images_jeux_de_role
+{
+  background: url(images/Pages_informations/illustration_info_JDR.jpg) center / cover ;
+}
+
+#images_jeux_anciens
+{
+  background: url(images/Pages_informations/illustration_info_Jeux_anciens_nordique.jpg) no-repeat center / cover ;
+}
+
+#images_atelier_creation
+{
+  background: url(images/Pages_informations/illustration_info_atelier_creation_enfant.jpg) center / cover;
+}
+
+
+
+
+
+/*propriétés pied de page*/
+footer
+{
+  background-color: rgb(2, 2, 36);
+  color: #EEF2F4;
+  font-family: Roboto ,Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 10%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 6rem;
+
+  clip-path: polygon(0 calc(0% + 2.5vw ), 100% 0%, 100% 100%, 0% 100%);
+}
+
+/*Ajustement footer*/
+footer h1
+{
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  margin-top: 6rem;
+}
+
+footer em , a 
+{
+  font-weight: 100;
+  font-style: normal;
+  text-decoration: none;
+  color: white;
+}
+
+footer li
+{
+  margin-top: 0.5rem;     
+}
+
+
+/*FICHE CONTACT*/
+.contact a em:hover
+{
+  transition: all .1s ease-in-out;
+}
+
+.contact a em:hover
+{
+ text-shadow: 1px 1px 0px rgb(155, 4, 255); 
+}
+
+
+/*FICHE RESEAUX SOCIAUX*/
+.socials ul
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.socials img
+{
+  scale: 0.6;
+  transition: all .2s ease-in-out;
+}
+
+.socials img:hover
+{
+  /*margin-right: 1rem;*/
+  transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+
+
+/*-----------------------MEDIA QUERIES-----------------------*/
+@media screen and (max-width : 1200px) 
+{
+    /*Menu navigation*/  
+    nav ul
+    {
+      flex-direction: column;
+      background-color: rgba(2, 2, 36, 0.603);
+      padding-bottom: 1rem;
+      clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 2.5vw), 0% 100%);
+    }
+
+
+    #informations_principales
+    {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+
+    .infos_texte
+    {
+      background-color: rgba(200, 230, 230, 0.623);
+      width: 95%;
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+
+      /*pour aligner le texte différement au centre de la bulle sur des écrants de mobiles*/
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    #informations_principales img
+    {
+      width: 100%;
+    }
+
+    .infos_images
+    {
+      width: 100%;
+    }
+
+    /*pour aligner le texte différement au centre de la bulle sur des écrants de mobiles*/
+    .infos_texte h1, h2
+    {
+      text-align: center;
+    }
+
+    /*pour aligner le bouton différement au centre de la bulle sur des écrants de mobiles*/
+    .bouton_contact /*container du a*/
+    {
+      display: flex;
+      justify-content: center;
+    }
+
+
+    .infos_texte a:hover
+    {
+      background-color: blueviolet;
+      box-shadow: 0 5px 0 rgb(68, 10, 122);
+      margin-top: -0.2rem ;
+      margin-bottom: 0.2rem ;
+    }
+
+
+    /*Pied de page*/
+    footer 
+    {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    nav ul
+    {
+      padding-top: 0.25rem;
+    }
+
+    nav li 
+    {
+      margin-bottom: 1rem;
+    }
+
+}
+
