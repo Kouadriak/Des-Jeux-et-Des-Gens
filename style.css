@@ -398,23 +398,26 @@ footer li
 /*FICHE RESEAUX SOCIAUX*/
 .socials ul
 {
- 
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
-  
+  align-items: center; 
+}
+
+.socials ul li 
+{
+  margin-right: 0.5rem;
 }
 
 .socials img
 {
-  scale: 0.6;
+  /*scale: 0.6;*/
+  width: 90%;
   transition: all .2s ease-in-out;
 }
 
 .socials img:hover
 {
-  /*margin-right: 1rem;*/
   transform: scale(1.2);
 }
 
