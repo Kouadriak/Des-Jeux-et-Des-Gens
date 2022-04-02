@@ -270,9 +270,15 @@ footer li
   align-items: center;
 }
 
+.socials ul li 
+{
+  margin-right: 0.5rem
+}
+    
 .socials img
 {
-  scale: 0.6;
+  /*scale: 0.6;*/
+  width: 90%;
   transition: all .2s ease-in-out;
 }
 
